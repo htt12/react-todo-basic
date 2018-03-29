@@ -5,7 +5,10 @@ console.log(Data);
 
 export default props => {
     const listItems = Data.map((item, index) =>{
-        return <li key={index} className='collection-item pink darken-2 white-text'>{item.title}</li>
+        return (
+            <div key={index} className='row '>
+                <li key={index} className='collection-item pink darken-2 white-text'>{item.title}</li>
+            </div>)
     }); 
     
     return(
