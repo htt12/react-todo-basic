@@ -15,8 +15,4 @@ export default [
         title: 'Wake up',
         details: 'Open your eyes and get out of bed'
     },
-    {
-        title: 'Get hot cheetos',
-        details: 'Get the xxtra hot',
-    },
 ]

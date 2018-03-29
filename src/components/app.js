@@ -18,13 +18,26 @@ class App extends Component{
             list: [item, ...this.state.list]
         })
     }
+
+    deleteItem(index){
+        const newList = [...this.state.list];
+        newList.splice(index, 1);
+
+        console.log('Old:', this.state.list);
+        console.log('New:', newList);
+        
+        this.setState({
+            list: newList,
+        })
+    }
+
     render(){
         return (
             <div>
-                <div className="container center">
+                <div className="container">
                     <h1 className="center purple lighten-4">To Do List</h1>
-                    <List list={this.state.list}/>
-                    <AddForm add={this.addItem.bind(this)}/>
+                    <List list={this.state.list} delete={this.deleteItem.bind(this)}/>
+                    <AddForm add={this.addItem.bind(this)} />
                 </div>
             </div>
         );

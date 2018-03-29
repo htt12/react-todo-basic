@@ -15,6 +15,7 @@ class AddForm extends Component {
         
         this.props.add(this.state);
 
+
         this.setState({
             title: '',
             details:'',
